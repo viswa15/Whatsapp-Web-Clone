@@ -23,6 +23,7 @@ const processPayload = async (payload) => {
             const newMessage = new Message({
                 wa_id: messageData.from,
                 name: contactData.profile.name,
+                from: messageData.from,
                 message_id: messageData.id,
                 body: messageData.text.body,
                 timestamp: new Date(messageData.timestamp * 1000),

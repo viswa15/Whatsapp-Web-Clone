@@ -18,6 +18,7 @@ const processWebhook = async (req, res) => {
         const newMessage = new Message({
           wa_id: messageData.from,
           name: contactData.profile.name,
+          from: messageData.from,
           message_id: messageData.id,
           body: messageData.text.body,
           timestamp: new Date(messageData.timestamp * 1000),
@@ -114,6 +115,7 @@ const sendMessage = async (req, res) => {
         const newMessage = new Message({
             wa_id,
             name,
+            from: MY_PHONE_WA_ID,
             body,
             message_id: `demo_${new Date().getTime()}`,
             timestamp: new Date(),

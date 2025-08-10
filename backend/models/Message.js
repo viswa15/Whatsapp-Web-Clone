@@ -9,6 +9,10 @@ const MessageSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+   from: { 
+    type: String, 
+    required: true 
+  },
   message_id: { // The unique ID of the message from WhatsApp
     type: String,
     required: true,
