@@ -108,6 +108,8 @@ const getMessagesForConversation = async (req, res) => {
 
 // --- Logic for Sending a Message (UI Demo) ---
 const sendMessage = async (req, res) => {
+    const MY_PHONE_WA_ID = '918329446654';
+
     const { wa_id, name, body } = req.body;
     const io = getIO();
 
